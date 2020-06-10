@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>基于数据挖掘的新闻热点发现系统</title>
+    <script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
+    <script src="/js/bootstrap.bundle.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css" />
+     
+</head>
+  
+<body >
+    <div class="navbar navbar-fixed-top navbar-inverse" role="navigation">
+      <div class="position1">
+        <label class="font-type">基于数据挖掘的新闻热点发现系统</label>
+      </div>
+ 
+      </div>   
+     </div> 
+     <div style="height: 70px;width: 100%;">
+       
+     </div>
+<!-- 侧滑菜单 -->
+  <div id="wrapper">
+        <div class="overlay"></div>
+    
+        <!-- Sidebar -->
+        <nav class="navbar navbar-inverse navbar-fixed-top" id="sidebar-wrapper" role="navigation">
+            <ul class="nav sidebar-nav">
+                <li class="sidebar-brand">
+                </li>
+                <li class="active1">
+                    <a href="index.html"><i class="fa fa-fw fa-home"></i> 主页</a>
+                </li>
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-fw fa-plus"></i> 新闻抽取 <span class="caret"></span></a>
+                  <ul class="dropdown-menu" role="menu">
+                    <li class="dropdown-header">新闻网站选取</li>
+                    <li><a href="scrapy_pp.html">澎湃新闻</a></li>
+                    <li><a href="scrapy_bj.html">新京报网</a></li>
+                    <li><a href="scrapy_nf.html">南方周末</a></li>
+                  </ul>
+                </li>
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-fw fa-plus"></i> 新闻聚类 <span class="caret"></span></a>
+                  <ul class="dropdown-menu" role="menu">
+                    <li class="dropdown-header">聚类算法选取</li>
+                        <li><a href="cluster">基于k均值的层次凝聚聚类算法</a></li>
+                    <li class="dropdown-header">话题抽取</li>
+                        <li><a href="keyhots">聚类关键字提取及热力值计算</a></li>
+                  </ul>
+                </li>
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-fw fa-plus"></i> 历史任务 <span class="caret"></span></a>
+                  <ul class="dropdown-menu" role="menu">
+                    <li class="dropdown-header">历史任务选取</li>
+                    <li><a href="scrapy_results">历史新闻抽取任务查询</a></li>
+                    <li><a href="cluster_results">历史新闻聚类任务查询</a></li>
+                    <li><a href="keyhots_results">历史话题抽取任务查询</a></li>
+                  </ul>
+                </li>
+            </ul>
+        </nav>
+        <!-- /#sidebar-wrapper -->
+ 
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+          <button type="button" class="hamburger is-closed animated fadeInLeft" data-toggle="offcanvas">
+            <span class="hamb-top"></span>
+            <span class="hamb-middle"></span>
+            <span class="hamb-bottom"></span>
+          </button>
+ 
+          <div>
+              <div class="container">
+                  <div class = "row">
+                      <div class="col-sm-4">
+                          <div class="button_box">
+                              <img src='/img/1.jpg' class="img_box img-rounded img-responsive">
+                              <div class="dropdown">
+                                <button type="button" class="btn  btn-default btn-lg btn-block dropdown-toggle" data-toggle="dropdown">
+                                  新闻抽取
+                                </button>
+                                <div class="dropdown-menu">
+                                  <a class="dropdown-item btn btn-default btn-block btn-lg" href="scrapy_pp.html">澎湃新闻</a>
+                                  <a class="dropdown-item btn btn-default btn-block btn-lg" href="scrapy_bj.html">新京报网</a>
+                                  <a class="dropdown-item btn btn-default btn-block btn-lg" href="scrapy_nf.html">南方周末</a>
+                                </div>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="col-sm-4">
+                          <div class="button_box">
+                              <img src='/img/3.jpg' class="img_box img-rounded img-responsive">
+                              <div class="dropdown">
+                                <button type="button" class="btn  btn-default btn-lg btn-block dropdown-toggle" data-toggle="dropdown">
+                                  新闻聚类/话题抽取
+                                </button>
+                                <div class="dropdown-menu">
+                                  <a class="dropdown-item btn btn-default btn-block btn-lg" href="cluster">基于k均值的层次凝聚聚类算法</a>
+                                    <a class="dropdown-item btn btn-default btn-block btn-lg" href="keyhots">基于textrank的话题抽取算法</a>
+                                </div>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="col-sm-4">
+                          <div class="button_box">
+                              <img src='/img/2.jpg' class="img_box img-rounded img-responsive">
+                              <div class="dropdown">
+                                <button type="button" class="btn  btn-default btn-lg btn-block dropdown-toggle" data-toggle="dropdown">
+                                  历史任务
+                                </button>
+                                <div class="dropdown-menu">
+                                  <a class="dropdown-item btn btn-default btn-block btn-lg" href="scrapy_results">历史新闻抽取任务</a>
+                                  <a class="dropdown-item btn btn-default btn-block btn-lg" href="cluster_results">历史新闻聚类任务</a>
+                                    <a class="dropdown-item btn btn-default btn-block btn-lg" href="keyhots_results">历史话题抽取任务</a>
+                                </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+
+          </div>
+        </div>
+        <!-- /#page-content-wrapper -->
+ 
+    </div>
+</body>
+
+<script src="/js/diy.js"></script>
+</html>
